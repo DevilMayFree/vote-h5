@@ -1,0 +1,117 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>
+<html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>
+<html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--苹果手机全屏问题-->
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+
+    <title>2024年度內部最佳分析師評選投票</title>
+    <link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/sweet-alert.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+    <link href="css/content.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body style="background:url('/images/bg.png') no-repeat;width:100%;height:100%;background-size:100% 100%; z-index: 1;">
+
+<div class="wrapper">
+    <div class="swiper-container" id="banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/people.jpg" alt="轮播图" >
+            </div>
+            <div class="swiper-slide">
+                <img src="images/people.jpg" alt="轮播图" >
+            </div>
+            <div class="swiper-slide">
+                <img src="images/people.jpg" alt="轮播图" >
+            </div>
+            <div class="swiper-slide">
+                <img src="images/people.jpg" alt="轮播图" >
+            </div>
+            <div class="swiper-slide">
+                <img src="images/people.jpg" alt="轮播图" >
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination banner_page"></div>
+</div>
+
+<div class="gridContainer clearfix">
+    <div id="div3" class="fluid flipInX animated">
+        <!--<img src="images/title_3.png" style="width:80%;">-->
+        <h4 style="color: white">活動背景</h4>
+        <p style="color: rgba(255,255,255,0.85)">
+            隨著金融市場的不斷變化和發展，高欣證券投資顧問股份有限公司致力於為客戶提供最專業的投資建議與服務。<br>
+            為了表揚在過去一年中表現優異、為客戶創造卓越價值的分析師，我們特此舉辦2024年度內部最佳分析師評選投票活動。<br>
+            本次活動旨在透過公開投票，選出最受客戶和同事們認可的頂尖分析師，進一步激勵公司員工的積極性，提升整體服務品質<br>
+        </p>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/sweet-alert.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var mySwiper = new Swiper("#banner", {
+            loop: true,
+            loopedSlides: 5,
+            slidesPerView: 'auto',
+            autoplay: true,
+            centeredSlides: true,
+            initialSlide: 2,
+            watchSlidesProgress: true,
+            pagination: {
+                el: '.banner_page',
+                clickable: true,
+            },
+            on: {
+                progress: function (progress) {
+                    for (i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i);
+                        var slideProgress = this.slides[i].progress;
+                        if (Math.abs(slideProgress) > 1) {
+                            var modify = (Math.abs(slideProgress) - 1) * 0.4 + 1;
+                        }
+                        translate = slideProgress * modify * 31.8 + '%';
+                        scale = 1 - Math.abs(slideProgress) / 3;
+                        zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                        slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                        slide.css('zIndex', zIndex);
+                        slide.css('opacity', 1);
+                        if (Math.abs(slideProgress) > 3) {
+                            slide.css('opacity', 0);
+                        }
+                    }
+                },
+                setTransition: function (transition) {
+                    for (var i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i)
+                        slide.transition(transition);
+                    }
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>

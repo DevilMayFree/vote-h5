@@ -1,0 +1,27 @@
+#banner {
+    margin: 10% auto 0;
+}
+
+.swiper-slide {
+    width: 60%;
+    height: 75%;
+}
+
+.banner_page {
+    margin: 2% auto;
+    left: 0;
+    right: 0;
+}
+
+.banner_page span {
+    margin: 0 1%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.swiper-pagination-bullet-active {
+    width: 1.6%;
+    border-radius: 0.8%;
+}
