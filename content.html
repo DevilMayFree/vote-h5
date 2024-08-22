@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--苹果手机全屏问题-->
-    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
     <meta content="yes" name="apple-mobile-web-app-capable"/>
     <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
     <meta content="telephone=no" name="format-detection"/>
@@ -35,34 +35,80 @@
     <div class="swiper-container" id="banner">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="images/people.jpg" alt="轮播图" >
+                <img src="images/people.jpg" alt="轮播图">
             </div>
             <div class="swiper-slide">
-                <img src="images/people.jpg" alt="轮播图" >
+                <img src="images/people.jpg" alt="轮播图">
             </div>
             <div class="swiper-slide">
-                <img src="images/people.jpg" alt="轮播图" >
+                <img src="images/people.jpg" alt="轮播图">
             </div>
             <div class="swiper-slide">
-                <img src="images/people.jpg" alt="轮播图" >
+                <img src="images/people.jpg" alt="轮播图">
             </div>
             <div class="swiper-slide">
-                <img src="images/people.jpg" alt="轮播图" >
+                <img src="images/people.jpg" alt="轮播图">
             </div>
         </div>
     </div>
     <div class="swiper-pagination banner_page"></div>
 </div>
 
+<div class="gridContainer clearfix" style="z-index:99;">
+    <div class="fluid bounceIn  vote-number" style="z-index:999;">
+        <span class="go">当前得票数: 512 </span>
+    </div>
+</div>
+
+<div class="gridContainer clearfix" style="z-index:99;">
+    <div id="div4" class="fluid bounceIn " style="z-index:999;">
+        <a href="#" class="go btn" style="z-index:9999;">投票</a>
+    </div>
+</div>
+
 <div class="gridContainer clearfix">
-    <div id="div3" class="fluid flipInX animated">
-        <!--<img src="images/title_3.png" style="width:80%;">-->
-        <h4 style="color: white">活動背景</h4>
-        <p style="color: rgba(255,255,255,0.85)">
-            隨著金融市場的不斷變化和發展，高欣證券投資顧問股份有限公司致力於為客戶提供最專業的投資建議與服務。<br>
-            為了表揚在過去一年中表現優異、為客戶創造卓越價值的分析師，我們特此舉辦2024年度內部最佳分析師評選投票活動。<br>
-            本次活動旨在透過公開投票，選出最受客戶和同事們認可的頂尖分析師，進一步激勵公司員工的積極性，提升整體服務品質<br>
-        </p>
+    <div id="div3" class="fluid flipInX ">
+        <div id="teacher">
+            <div class="num1 hidden-teacher teacher-text">
+                <h4>陳志強老師</h4>
+                <p>
+                    陳志強老師於2003年獲得台灣大學經濟學博士學位，隨後在政府經濟部門工作多年，主要負責宏觀經濟政策研究與制定。<br>
+                    2008年，他轉至私人企業，擔任大型企業的首席經濟分析師，專注於行業趨勢分析與策略制定。<br>
+                    2015年，陳志強老師加入高欣證券投資顧問股份有限公司，擔任資深經濟分析師，帶領團隊在股票市場取得優異表現。<br>
+                    他推出了一系列針對中小投資者的教育課程，致力於提升大眾的金融素養。<br>
+                </p>
+            </div>
+            <div class="num2 teacher-text">
+                <h4>張文輝老師</h4>
+                <p>
+                    張文輝老師畢業於國外著名大學的金融工程專業，回國後進入銀行業，擔任風險管理部門的主管。<br>
+                    在十年的銀行從業經驗中，他成功幫助銀行降低了多項重大風險。<br>
+                    2012年，他轉職至一家國際投資公司，負責亞太區域的投資策略制定。<br>
+                    2018年，張文輝老師加入高欣證券投資顧問股份有限公司，擔任首席策略師，專注於大數據分析與量化投資。<br>
+                    他在職場之外創辦了財經頻道，通過多媒體平台分享投資理念與市場分析，受到了廣泛關注。<br>
+                </p>
+            </div>
+            <div class="num3 hidden-teacher teacher-text">
+                <h4>杜文瀚老師</h4>
+                <p>
+                    杜文瀚老師畢業於國內頂尖大學的數學系，擁有紮實的數理基礎。<br>
+                    2004年，他取得金融工程碩士學位，進入一家投資銀行工作，專注於金融衍生品的設計與交易。<br>
+                    2010年，他轉至對沖基金，擔任量化投資部門的主管，帶領團隊開發多種高頻交易策略並取得顯著成效。<br>
+                    2018年，杜文瀚老師加入高欣證券投資顧問股份有限公司，擔任量化投資總監，<br>
+                    致力於推動金融科技與量化投資的發展，並在學術界發表了多篇具有影響力的研究論文。<br>
+                </p>
+            </div>
+            <div class="num4 hidden-teacher teacher-text">
+                <h4>黃志偉老師</h4>
+                <p>
+                    黃志偉老師在2000年從國際關係學院畢業後，進入政府部門工作，專門從事經濟政策研究與國際經濟合作。<br>
+                    2006年，他取得了金融碩士學位，轉入私營部門，成為一家跨國企業的金融分析師。<br>
+                    2012年，黃志偉老師加入某知名對沖基金，負責全球宏觀經濟分析與投資決策。<br>
+                    2020年，黃志偉老師加入高欣證券投資顧問股份有限公司，擔任全球市場分析師，專注於開發智能投資平台。<br>
+                    他在多個國際論壇上分享其創新理念，受到了業界的高度評價。<br>
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -72,13 +118,22 @@
 <script src="js/swiper.min.js"></script>
 <script type="text/javascript">
     $(function () {
+        var handler = function (index) {
+            if (index === 0) {
+                return $('.num1')
+            } else if (index === 1) {
+                return $('.num2')
+            } else if (index === 2) {
+                return $('.num3')
+            }
+        }
         var mySwiper = new Swiper("#banner", {
             loop: true,
             loopedSlides: 5,
             slidesPerView: 'auto',
             autoplay: true,
             centeredSlides: true,
-            initialSlide: 2,
+            initialSlide: 1,
             watchSlidesProgress: true,
             pagination: {
                 el: '.banner_page',
@@ -108,8 +163,19 @@
                         var slide = this.slides.eq(i)
                         slide.transition(transition);
                     }
+                },
+                slideChange: function () {
+                    console.log('测试loop:true时的值----', this.realIndex)
+                    const index = this.realIndex;
+
+                    $('.teacher-text').hide();
+                    $('.teacher-text').each(function (i, item) {
+                        const ele = handler(index);
+                        ele.show();
+                    });
                 }
-            }
+            },
+
         })
     })
 </script>

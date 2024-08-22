@@ -203,6 +203,14 @@ body {
     z-index: 10;
 }
 
+.vote-number {
+    animation-delay: 3.5s;
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+    margin-top: 2em;
+    z-index: 10;
+}
+
 #div4 .go {
     display: inline-block;
     padding: 0.8em 4em;
@@ -214,6 +222,19 @@ body {
     letter-spacing: 2px;
     z-index: 10;
 }
+
+.vote-number .go {
+    display: inline-block;
+    padding: 0.8em 4em;
+    color: rgb(195, 13, 35);
+    background: #fff;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+
 
 #search {
     position: relative;
@@ -472,4 +493,18 @@ body {
     left: 0;
     right: 0;
     height: 100px;
+}
+
+#teacher {
+    h4 {
+        color: white;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .hidden-teacher {
+        display: none;
+    }
 }
