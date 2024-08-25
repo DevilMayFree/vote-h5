@@ -1,5 +1,5 @@
 #banner {
-    margin: 30% auto -20%;
+    margin: 30% auto -15%;
     /*transform: scale(2);*/
 }
 
@@ -25,4 +25,20 @@ h2 {
 .swiper-pagination-bullet-active {
     width: 1.6%;
     border-radius: 0.8%;
+}
+
+
+.image-button {
+    border: none; /* 移除默认边框 */
+    background: transparent; /* 背景透明 */
+    cursor: pointer; /* 鼠标悬停时显示手形光标 */
+    width: 55%;
+}
+
+.image-button img {
+    height: auto; /* 高度自动调整 */
+}
+
+.image-button:focus {
+    outline: none; /* 移除焦点轮廓 */
 }
