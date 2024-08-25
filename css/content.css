@@ -1,5 +1,6 @@
 #banner {
-    margin: 10% auto 0;
+    margin: 30% auto 0;
+    transform: scale(2);
 }
 
 .swiper-slide {
