@@ -42,3 +42,12 @@ h2 {
 .image-button:focus {
     outline: none; /* 移除焦点轮廓 */
 }
+
+@font-face {
+    font-family: 'CustomFont'; /* 自定义字体名称 */
+    src: url('./number.otf') format('opentype'); /* 字体文件路径 */
+}
+
+.custom-font {
+    font-family: 'CustomFont', sans-serif; /* 使用自定义字体 */
+}

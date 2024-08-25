@@ -207,7 +207,7 @@ body {
     animation-delay: 3.5s;
     -webkit-animation-delay: 3.5s;
     -moz-animation-delay: 3.5s;
-    margin-top: 2em;
+    /*margin-top: 2em;*/
     z-index: 10;
 }
 
@@ -225,11 +225,22 @@ body {
 
 .vote-number .go {
     display: inline-block;
-    padding: 0.8em 4em;
-    color: rgb(195, 13, 35);
-    background: #fff;
+    /*padding: 0.8em 4em;*/
+    color:white;
+    /*color: rgb(195, 13, 35);*/
+    /*background: #fff;*/
     border-radius: 4px;
     font-size: 1em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+
+.vote-number .number {
+    display: inline-block;
+    color:white;
+    border-radius: 4px;
+    font-size: 3em;
     font-weight: 900;
     letter-spacing: 2px;
     z-index: 10;
