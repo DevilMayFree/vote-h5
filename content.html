@@ -145,7 +145,7 @@
                 },
                 error: function (msg) {
                     console.error(msg);
-                    if (msg.result === 'IP address exists') {
+                    if (msg.responseJSON.result === 'IP address exists') {
                         alert("您今日投票次數已用完");
                     }
                 }
