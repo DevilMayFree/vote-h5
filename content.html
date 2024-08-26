@@ -139,7 +139,7 @@
                 success: function (data) {
                     if (data.result === 'success') {
                         const num = resultList[sendIndex];
-                        $('#showNum').text(num + 1);
+                        $('#showNum').text(String(Number(num)+1));
                         alert("投票成功!");
                     }
                 },
