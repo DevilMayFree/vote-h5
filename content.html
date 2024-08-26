@@ -111,6 +111,7 @@
 <script src="js/swiper.min.js"></script>
 <script type="text/javascript">
     $(function () {
+        var currentIndex = 0;
         var resultList = [];
         var getData = function () {
             $.ajax({
@@ -119,6 +120,7 @@
                 dataType: "json",
                 success: function (data) {
                     resultList = data.result;
+                    $('#showNum').text(resultList[0]);
                 },
                 error: function (msg) {
                     console.error(msg);
@@ -187,7 +189,7 @@
                 },
                 slideChange: function () {
                     // console.log('测试loop:true时的值----', this.realIndex)
-                    const index = this.realIndex;
+                    currentIndex = this.realIndex;
 
                     $('.teacher-text').each(function (i, item) {
                         const ele = handler(i);
@@ -196,13 +198,12 @@
                         }
                     });
 
-                    const ele = handler(index);
+                    const ele = handler(currentIndex);
                     if (ele) {
                         ele.show();
                     }
-
-                    const num = resultList[index];
-                    $('#showNum').innerHTML = num;
+                    const num = resultList[currentIndex];
+                    $('#showNum').text(num);
                 }
             },
 
