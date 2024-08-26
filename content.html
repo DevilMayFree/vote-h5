@@ -134,9 +134,7 @@
                 url: "http://156.248.77.47:8080/api/vote",
                 type: "post",
                 dataType: "json",
-                data: {
-                    num: String(currentIndex)
-                },
+                data: JSON.stringify({num: String(currentIndex)}),
                 success: function (data) {
                     if (data.result === 'success') {
                         alert("投票成功!");
