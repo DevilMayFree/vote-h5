@@ -519,3 +519,25 @@ body {
         display: none;
     }
 }
+
+.image-button {
+    border: none; /* 移除默认边框 */
+    background: transparent; /* 背景透明 */
+    cursor: pointer; /* 鼠标悬停时显示手形光标 */
+    width: 55%;
+}
+
+.image-button img {
+    height: auto; /* 高度自动调整 */
+}
+
+.image-button:focus {
+    outline: none; /* 移除焦点轮廓 */
+}
+
+
+.img-size {
+    width: 100%; /* 根据容器宽度调整图像 */
+    height: auto; /* 自动调整高度，保持宽高比例 */
+    object-fit: cover; /* 图像覆盖整个容器区域 */
+}
