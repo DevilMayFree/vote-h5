@@ -130,6 +130,7 @@
         getData();
 
         $('#sub-btn').click(function () {
+            const sendIndex = currentIndex;
             $.ajax({
                 url: "http://156.248.77.47:8080/api/vote",
                 type: "post",
@@ -137,6 +138,8 @@
                 data: JSON.stringify({num: String(currentIndex)}),
                 success: function (data) {
                     if (data.result === 'success') {
+                        const num = resultList[sendIndex];
+                        $('#showNum').text(num + 1);
                         alert("投票成功!");
                     }
                 },
