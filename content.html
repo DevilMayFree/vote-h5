@@ -62,7 +62,7 @@
 
 <div class="gridContainer clearfix" style="z-index:99;">
     <div id="div6" class="fluid bounceIn " style="z-index: 999;position: relative;">
-        <button class="image-button" onclick="alert('投票!')">
+        <button id="sub-btn" class="image-button">
             <img src="images/btn2.png" alt="Image Button">
         </button>
     </div>
@@ -128,6 +128,28 @@
             });
         }
         getData();
+
+        $('#sub-btn').click(function () {
+            $.ajax({
+                url: "http://localhost:8080/api/vote",
+                type: "post",
+                dataType: "json",
+                data: {
+                    num: currentIndex
+                },
+                success: function (data) {
+                    if (data.result === 'success') {
+                        alert("投票成功!");
+                    }
+                },
+                error: function (msg) {
+                    console.error(msg);
+                    if (msg.result === 'ip_exist') {
+                        alert("您今日投票次數已用完");
+                    }
+                }
+            });
+        });
 
         var handler = function (index) {
             return $('.num' + (index + 1))
