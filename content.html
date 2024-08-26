@@ -71,7 +71,7 @@
 <div class="gridContainer clearfix" style="z-index:99;">
     <div class="fluid bounceIn  vote-number" style="z-index:999;">
         <span class="go">當前 </span>
-        <span class="number custom-font">512</span>
+        <span id="showNum" class="number custom-font">0</span>
         <span class="go">票</span>
     </div>
 </div>
@@ -111,8 +111,24 @@
 <script src="js/swiper.min.js"></script>
 <script type="text/javascript">
     $(function () {
+        var resultList = [];
+        var getData = function () {
+            $.ajax({
+                url: "http://localhost:8080/api/getVote",
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    resultList = data.result;
+                },
+                error: function (msg) {
+                    console.error(msg);
+                }
+            });
+        }
+        getData();
+
         var handler = function (index) {
-            return $('.num'+(index + 1))
+            return $('.num' + (index + 1))
         }
         var mySwiper = new Swiper("#banner", {
             loop: true,
@@ -184,6 +200,9 @@
                     if (ele) {
                         ele.show();
                     }
+
+                    const num = resultList[index];
+                    $('#showNum').innerHTML = num;
                 }
             },
 
